@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="store">
+  <head>
+    <title>Angulas Js essecials</title>
+    <script
+      type="text/javascript"
+      src="/resources/script/angular.min.js"
+    ></script>
+    <script
+    type="text/javascript"
+    src="/1 step - data and forms//js/firstController.js"
+  ></script>
+    <meta charset="utf-8" />
+  </head>
+  <body ng-controller="firstController as user">
+    <input type="text" ng-model="user.myName">
+    <br/>
+    <input type="text" ng-model="user.myLastName">
+    <br/>
+    
+    <h1>Dados</h2>
+
+    <h2>Name: {{user.myName}}</h1>
+    <h2>Sobrenome: {{user.myLastName}}</h1>
+
+    <br/>
+
+    <h1>Contador</h1>
+
+    <a href="#" ng-click="addCount()">Count</a>
+     <hr>
+    <h2>Contador: {{Count}}</h2>
+
+    <br/>
+
+    <h1>Loop Pessoas</h1>
+    
+    <ul>
+        <li ng-repeat="name in people">{{name}}</li>
+    </ul>
+
+    <br/>
+
+    <h1>Formularios</h1>
+
+    <form action="" name="firstForm">
+        <input type="text" name="name" ng-model="name" required="required">
+        <button>Salvar</button>
+
+    </form>
+  </body>
+</html>
